@@ -9,7 +9,7 @@ const Team = () => {
       role: "CEO / Managing Director",
       edu: "MA (History) - University of Agra",
       exp: "15 years experience at 'RJ Plastic Yarn Industry', Nunhai Agra.",
-      img: "/images/preeti_manav.png",
+      img: process.env.PUBLIC_URL + "/images/preeti_manav.png",
       position: "top"
     },
     {
@@ -17,7 +17,7 @@ const Team = () => {
       role: "CEO / Managing Director",
       edu: "MA (English) & B.Ed - University of Agra",
       exp: "15 years experience at 'RJ Plastic Yarn Industry', Nunhai Agra.",
-      img: "/images/rinki_nigam.png",
+      img: process.env.PUBLIC_URL + "/images/rinki_nigam.png",
       position: "top"
     },
     {
@@ -25,24 +25,24 @@ const Team = () => {
       role: "Director / General Manager",
       edu: "B.E (Mech), M.Tech (Manufacturing and Automation)",
       exp: "17 years industry exp. Certified ZED Assessor (2000+ Bronze, 50 Silver, 30 Gold), LEAN consultant (2023), GEM OEM auditor (2021).",
-      img: "/images/satish_kumar_nigam.png"
+      img: process.env.PUBLIC_URL + "/images/satish_kumar_nigam.png"
     },
     {
       name: "Yogender Bhaskar",
       role: "Director / General Manager",
       edu: "B.E in ECE",
       exp: "20 years industry experience with extensive co-ordination expertise in various projects.",
-      img: "/images/yogendra_bhaskar.jpeg",
+      img: process.env.PUBLIC_URL + "/images/yogendra_bhaskar.jpeg",
       position: "center 30%"
     }
   ];
 
   const management = [
-    { name: "Nitin Yadav", role: "General Manager", img: "/images/nitin_yadav.jpeg" },
-    { name: "Neelam Yadav", role: "General Manager", img: "/images/neelam_yadav.png" },
-    { name: "Ankit Agrawal", role: "Data Analyst Lead", img: "/images/ankit_agrawal.png" },
-    { name: "Anuj Singh", role: "Team Lead", img: "/images/anuj_singh.png" },
-    { name: "Atin Manav", role: "Team Lead", img: "/images/atin_manav.png", scale: 2.1, origin: "top" }
+    { name: "Nitin Yadav", role: "General Manager", img: process.env.PUBLIC_URL + "/images/nitin_yadav.jpeg" },
+    { name: "Neelam Yadav", role: "General Manager", img: process.env.PUBLIC_URL + "/images/neelam_yadav.png" },
+    { name: "Ankit Agrawal", role: "Data Analyst Lead", img: process.env.PUBLIC_URL + "/images/ankit_agrawal.png" },
+    { name: "Anuj Singh", role: "Team Lead", img: process.env.PUBLIC_URL + "/images/anuj_singh.png" },
+    { name: "Atin Manav", role: "Team Lead", img: process.env.PUBLIC_URL + "/images/atin_manav.png", scale: 2.1, origin: "top" }
   ];
 
   return (

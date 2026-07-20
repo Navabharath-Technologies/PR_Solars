@@ -7,31 +7,31 @@ const Products = () => {
       title: "AC Flood Light",
       icon: <SunMedium size={56} color="var(--color-gold)" />,
       desc: "High-quality LED lights ranging from 30W to 200W with durable aluminum bodies. Models 100W and above feature independent 50W modules with individual drivers for easier maintenance. Fully CE & RoHS certified.",
-      img: "/images/ac_flood_light.png"
+      img: process.env.PUBLIC_URL + "/images/ac_flood_light.png"
     },
     {
       title: "AC Street Light",
       icon: <Settings size={56} color="var(--color-gold)" />,
       desc: "Features built-in Lithium-ion batteries and light sensors for automatic 'dusk-to-dawn' functionality. Provides 4 to 5 hours of backup and operates across 110V to 300V, making it ideal for rural installations.",
-      img: "/images/ac_street_light.webp"
+      img: process.env.PUBLIC_URL + "/images/ac_street_light.webp"
     },
     {
       title: "Standalone Solar Street Lights",
       icon: <BatteryCharging size={56} color="var(--color-gold)" />,
       desc: "Complete pole-mounted systems combining high-efficiency solar-powered LED lights, advanced MPPT drivers, durable solar panels, and 12V Lithium or Lead batteries for completely off-grid illumination.",
-      img: "/images/standalone_solar.webp"
+      img: process.env.PUBLIC_URL + "/images/standalone_solar.webp"
     },
     {
       title: "Top Roof Solar Panel",
       icon: <ArrowUpRight size={56} color="var(--color-gold)" />,
       desc: "Rooftop installations designed specifically to drastically lower high power tariffs for residential homes, commercial units, and industrial facilities, aiming for a fast cost recovery period of 5-7 years.",
-      img: "/images/top_roof_solar_panel.webp"
+      img: process.env.PUBLIC_URL + "/images/top_roof_solar_panel.webp"
     },
     {
       title: "Ground Mounting Panel",
       icon: <Maximize size={56} color="var(--color-gold)" />,
       desc: "Solar panels installed on the ground using standard or pole mounts. We offer versatile options including single-axis or dual-axis sun-tracking capabilities to maximize energy yield throughout the day.",
-      img: "/images/ground_mounting_panel.webp"
+      img: process.env.PUBLIC_URL + "/images/ground_mounting_panel.webp"
     }
   ];
 
