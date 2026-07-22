@@ -117,6 +117,11 @@ const Consultancy = () => {
                   <span>Concessions on Bank Loan Interest Rates</span>
                 </li>
               </ul>
+              <div style={{ marginTop: '1rem' }}>
+                <a href="https://zed.msme.gov.in/" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                  Visit Official ZED Portal
+                </a>
+              </div>
             </motion.div>
             <motion.div 
               style={{ flex: '1 1 300px', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'var(--color-navy)', padding: '3rem' }}
