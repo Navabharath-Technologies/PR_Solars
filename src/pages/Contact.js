@@ -21,7 +21,7 @@ const Contact = () => {
           
           {/* Contact Info */}
           <div>
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Contact Information</h2>
+            <h2 className="mobile-heading-lg" style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Contact Information</h2>
             <p style={{ color: 'var(--color-gray)', marginBottom: '2.5rem' }}>
               Reach out to PR Solar Enterprise & Consultancy Service for any inquiries regarding solar installations, product manufacturing, or certification audits.
             </p>

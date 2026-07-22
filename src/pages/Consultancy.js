@@ -22,9 +22,9 @@ const Consultancy = () => {
       {/* International */}
       <AnimatedSection duration={0.3} className="section-padding">
         <div className="container">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2rem' }}>
-            <Globe size={40} color="var(--color-navy)" />
-            <h2 style={{ fontSize: '2.5rem', margin: 0 }}>International Standards</h2>
+          <div className="mobile-flex-heading" style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2rem' }}>
+            <Globe size={40} color="var(--color-navy)" className="mobile-icon" />
+            <h2 className="mobile-heading-lg" style={{ fontSize: '2.5rem', margin: 0 }}>International Standards</h2>
           </div>
           <TiltCard className="glass-card" style={{ borderLeft: '4px solid var(--color-gold)' }}>
             <h3>ISO 9001:2015</h3>
@@ -39,9 +39,9 @@ const Consultancy = () => {
       {/* Central Schemes */}
       <AnimatedSection duration={0.3} className="section-padding" style={{ backgroundColor: 'var(--color-gray-light)' }}>
         <div className="container">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '3rem' }}>
-            <Building size={40} color="var(--color-gold)" />
-            <h2 style={{ fontSize: '2.5rem', margin: 0, color: 'var(--color-navy)' }}>Central Schemes (QCI & Gov)</h2>
+          <div className="mobile-flex-heading" style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '3rem' }}>
+            <Building size={40} color="var(--color-gold)" className="mobile-icon" />
+            <h2 className="mobile-heading-lg" style={{ fontSize: '2.5rem', margin: 0, color: 'var(--color-navy)' }}>Central Schemes (QCI & Gov)</h2>
           </div>
           
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
@@ -99,7 +99,7 @@ const Consultancy = () => {
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              <h3 style={{ color: 'var(--color-navy)', fontSize: '2rem', marginBottom: '1rem' }}>Unlock Your ZED Certification</h3>
+              <h3 className="mobile-heading-lg" style={{ color: 'var(--color-navy)', fontSize: '2rem', marginBottom: '1rem' }}>Unlock Your ZED Certification</h3>
               <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem', lineHeight: '1.8' }}>
                 Join the MSME Sustainable (ZED) Certification scheme to manufacture high-quality goods with zero defects and zero environmental impact. As an Organizing Partner, we guide you through the entire process.
               </p>

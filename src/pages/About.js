@@ -41,9 +41,9 @@ const About = () => {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
             >
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-                <Factory size={40} color="var(--color-gold)" />
-                <h3 style={{ margin: 0, fontSize: '1.8rem' }}>Manufacturing Power</h3>
+              <div className="mobile-flex-heading" style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
+                <Factory size={40} color="var(--color-gold)" className="mobile-icon" />
+                <h3 className="mobile-heading-md" style={{ margin: 0, fontSize: '1.8rem' }}>Manufacturing Power</h3>
               </div>
               <p style={{ color: 'var(--color-text)' }}>
                 We pride ourselves on an exceptional production capacity of <strong>75MW</strong>. Our cutting-edge facility produces high-quality PV modules using premium MONO PERC and Polycrystalline (DCR and Non-DCR) solar cells. 
