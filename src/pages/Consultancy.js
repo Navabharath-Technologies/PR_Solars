@@ -1,6 +1,6 @@
 import React from 'react';
 import { Globe, Building, Landmark, CheckCircle2 } from 'lucide-react';
-import zedCertification from '../assets/zed-certification.png';
+import zedCertification from '../assets/zed-certification.jpeg';
 import HeroSlider from '../components/HeroSlider';
 import AnimatedSection from '../components/AnimatedSection';
 import TiltCard from '../components/TiltCard';
