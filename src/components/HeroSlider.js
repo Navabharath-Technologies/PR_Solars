@@ -41,7 +41,7 @@ const HeroSlider = ({ title, highlightText, subtitle, images, children, isFullSc
         paddingBottom: isFullScreen ? '100px' : '3rem' 
       }}>
         <motion.h1 
-          style={{ fontSize: '3.5rem', marginBottom: '1.5rem' }}
+          className="hero-title"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
@@ -49,7 +49,7 @@ const HeroSlider = ({ title, highlightText, subtitle, images, children, isFullSc
           {title} <span className="highlight">{highlightText}</span>
         </motion.h1>
         <motion.p 
-          style={{ fontSize: '1.2rem', margin: '0 auto', maxWidth: '700px' }}
+          className="hero-subtitle"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
@@ -58,7 +58,7 @@ const HeroSlider = ({ title, highlightText, subtitle, images, children, isFullSc
         </motion.p>
         {children && (
           <motion.div 
-            style={{ display: 'flex', gap: '1rem', marginTop: '3rem', justifyContent: 'center' }}
+            className="hero-buttons"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.8, ease: "easeOut" }}

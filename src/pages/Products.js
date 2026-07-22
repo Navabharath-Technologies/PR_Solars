@@ -44,21 +44,22 @@ const Products = () => {
           className="hero-bg" 
         />
         <div className="container hero-content" style={{ textAlign: 'center' }}>
-          <h1 style={{ fontSize: '3rem' }}>Solar Solutions & Products</h1>
+          <h1 className="hero-title">Solar Solutions & Products</h1>
           <p>Premium On-Grid, Off-Grid, and Hybrid Systems</p>
         </div>
       </div>
 
       <section className="section-padding" style={{ backgroundColor: 'var(--color-gray-light)' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
             {products.map((product, idx) => (
               <div key={idx} className="flip-card">
                 <div className="flip-card-inner">
                   {/* Front Side */}
                   <div className="flip-card-front glass-card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', textAlign: 'left', margin: 0, height: '100%' }}>
                     <div style={{ 
-                      height: '240px', 
+                      flex: 1,
+                      minHeight: '240px',
                       width: '100%', 
                       marginBottom: '2rem', 
                       borderRadius: '16px', 

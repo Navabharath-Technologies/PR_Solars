@@ -55,28 +55,28 @@ const Home = () => {
         <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem', textAlign: 'center' }}>
           <div>
             <Building size={40} color="var(--color-gold)" style={{ margin: '0 auto 1rem' }} />
-            <h2 style={{ color: 'var(--color-white)', fontSize: '2.5rem', margin: '0 0 0.5rem' }}>
+            <h2 className="stats-number" style={{ color: 'var(--color-white)', margin: '0 0 0.5rem' }}>
               <CountUpAnimation end={2016} duration={1.5} />
             </h2>
             <p style={{ color: 'var(--color-gray-light)', fontSize: '0.9rem' }}>Consultancy Established</p>
           </div>
           <div>
             <Factory size={40} color="var(--color-gold)" style={{ margin: '0 auto 1rem' }} />
-            <h2 style={{ color: 'var(--color-white)', fontSize: '2.5rem', margin: '0 0 0.5rem' }}>
+            <h2 className="stats-number" style={{ color: 'var(--color-white)', margin: '0 0 0.5rem' }}>
               <CountUpAnimation end={75} duration={2} suffix="MW" />
             </h2>
             <p style={{ color: 'var(--color-gray-light)', fontSize: '0.9rem' }}>PV Module Production Capacity</p>
           </div>
           <div>
             <Users size={40} color="var(--color-gold)" style={{ margin: '0 auto 1rem' }} />
-            <h2 style={{ color: 'var(--color-white)', fontSize: '2.5rem', margin: '0 0 0.5rem' }}>
+            <h2 className="stats-number" style={{ color: 'var(--color-white)', margin: '0 0 0.5rem' }}>
               <CountUpAnimation end={15} duration={1.8} suffix="+" />
             </h2>
             <p style={{ color: 'var(--color-gray-light)', fontSize: '0.9rem' }}>Years Exp. Auditors/Assessors</p>
           </div>
           <div>
             <Activity size={40} color="var(--color-gold)" style={{ margin: '0 auto 1rem' }} />
-            <h2 style={{ color: 'var(--color-white)', fontSize: '2.5rem', margin: '0 0 0.5rem' }}>
+            <h2 className="stats-number" style={{ color: 'var(--color-white)', margin: '0 0 0.5rem' }}>
               <CountUpAnimation end={25} duration={2.2} suffix="+" />
             </h2>
             <p style={{ color: 'var(--color-gray-light)', fontSize: '0.9rem' }}>Years Module Life Cycle</p>
@@ -94,7 +94,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '3rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '3rem' }}>
             {/* Pillar 1: Solar */}
             <div className="glass-card" style={{ display: 'flex', flexDirection: 'column' }}>
               <SunMedium size={48} color="var(--color-gold)" style={{ marginBottom: '1.5rem' }} />
@@ -136,7 +136,7 @@ const Home = () => {
       <section className="section-padding">
         <div className="container" style={{ textAlign: 'center' }}>
           <h2 style={{ marginBottom: '3rem' }}>Trusted By Esteemed Organizations</h2>
-          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '4rem', alignItems: 'center' }}>
+          <div className="clients-container" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '4rem', alignItems: 'center' }}>
             <div className="glass-card scan-line-card" style={{ padding: '2rem 3rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <h3 style={{ margin: 0, color: 'var(--color-navy-dark)', fontSize: '1.2rem' }}>Power Grid Corporation<br/>Of India Limited</h3>
             </div>

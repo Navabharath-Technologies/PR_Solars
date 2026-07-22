@@ -19,7 +19,7 @@ const About = () => {
 
       <section className="section-padding">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }}>
+          <div className="grid-2">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -65,7 +65,7 @@ const About = () => {
       </section>
 
       <section className="section-padding" style={{ backgroundColor: 'var(--color-gray-light)' }}>
-        <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+        <div className="container grid-2-gap2">
           <motion.div 
             className="glass-card-dark"
             initial={{ opacity: 0, y: 50, rotateX: 20 }}

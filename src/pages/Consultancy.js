@@ -44,7 +44,7 @@ const Consultancy = () => {
             <h2 style={{ fontSize: '2.5rem', margin: 0, color: 'var(--color-navy)' }}>Central Schemes (QCI & Gov)</h2>
           </div>
           
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
             <TiltCard className="glass-card-dark">
               <h3 style={{ color: 'var(--color-gold)' }}>ZED (QCI)</h3>
               <p><strong>Zero Defect Zero Effect</strong></p>
@@ -136,9 +136,9 @@ const Consultancy = () => {
       {/* State Level */}
       <AnimatedSection duration={0.3} className="section-padding">
         <div className="container">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2rem' }}>
-            <Landmark size={40} color="var(--color-navy)" />
-            <h2 style={{ fontSize: '2.5rem', margin: 0 }}>State Level: UP DIC</h2>
+          <div className="state-heading-container" style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2rem' }}>
+            <Landmark size={40} color="var(--color-navy)" className="state-heading-icon" />
+            <h2 className="state-heading-text" style={{ fontSize: '2.5rem', margin: 0 }}>State Level: UP DIC</h2>
           </div>
           <div style={{ 
             background: 'linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(245,247,250,1) 100%)',
@@ -153,11 +153,11 @@ const Consultancy = () => {
               <Landmark size={300} color="var(--color-navy)" />
             </div>
             
-            <div style={{ display: 'flex', alignItems: 'center', gap: '1.2rem', marginBottom: '1.5rem', borderBottom: '2px solid rgba(212, 175, 55, 0.15)', paddingBottom: '1.5rem' }}>
+            <div className="tus-card-header" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '1.2rem', marginBottom: '1.5rem', borderBottom: '2px solid rgba(212, 175, 55, 0.15)', paddingBottom: '1.5rem' }}>
               <div style={{ padding: '1rem', background: 'rgba(212, 175, 55, 0.15)', borderRadius: '16px', display: 'flex' }}>
-                <Landmark size={36} color="var(--color-gold)" />
+                <Landmark size={36} color="var(--color-gold)" className="tus-card-icon" />
               </div>
-              <h3 style={{ margin: 0, fontSize: '2.2rem', color: 'var(--color-navy)' }}>The Upgradation Scheme (TUS)</h3>
+              <h3 className="tus-card-title" style={{ margin: 0, fontSize: '2.2rem', color: 'var(--color-navy)' }}>The Upgradation Scheme (TUS)</h3>
             </div>
             
             <p style={{ marginBottom: '2rem', color: 'var(--color-text)', fontSize: '1.1rem', lineHeight: '1.8', maxWidth: '900px' }}>
@@ -166,7 +166,7 @@ const Consultancy = () => {
             
             <h4 style={{ color: 'var(--color-gold)', marginBottom: '1.5rem', fontSize: '1.2rem', letterSpacing: '0.5px' }}>Key Financial Benefits we help you secure:</h4>
             
-            <ul style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '1.5rem', listStyle: 'none', padding: 0 }}>
+            <ul style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', listStyle: 'none', padding: 0 }}>
               {[
                 { title: "Capital Subsidy", desc: "Up to 50% assistance (max ₹5 Lakh) on plant & machinery." },
                 { title: "Interest Subsidy", desc: "50% subvention on loans (max ₹1 Lakh/yr for 5 yrs)." },

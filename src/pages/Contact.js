@@ -11,13 +11,13 @@ const Contact = () => {
           className="hero-bg" 
         />
         <div className="container hero-content" style={{ textAlign: 'center' }}>
-          <h1 style={{ fontSize: '3rem' }}>Get in Touch</h1>
+          <h1 className="hero-title">Get in Touch</h1>
           <p>We're here to help you power the future.</p>
         </div>
       </div>
 
       <section className="section-padding">
-        <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem' }}>
+        <div className="container grid-2-gap2">
           
           {/* Contact Info */}
           <div>
