@@ -1,24 +1,21 @@
 import React from 'react';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import HeroSlider from '../components/HeroSlider';
 
 const Contact = () => {
   return (
     <div className="page-wrapper">
-      <div className="hero" style={{ minHeight: '40vh' }}>
-        <img 
-          src="https://images.unsplash.com/photo-1516387938699-a93567ec168e?q=80&w=2000&auto=format&fit=crop" 
-          alt="Contact us" 
-          className="hero-bg" 
-        />
-        <div className="container hero-content" style={{ textAlign: 'center' }}>
-          <h1 className="hero-title">Get in Touch</h1>
-          <p>We're here to help you power the future.</p>
-        </div>
-      </div>
+      <HeroSlider
+        title="Get in"
+        highlightText="Touch"
+        subtitle="We're here to help you power the future."
+        images={[process.env.PUBLIC_URL + "/images/contact_banner.png"]}
+        imagePosition="center 63%"
+      />
 
       <section className="section-padding">
         <div className="container grid-2-gap2">
-          
+
           {/* Contact Info */}
           <div>
             <h2 className="mobile-heading-lg" style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Contact Information</h2>
@@ -90,16 +87,16 @@ const Contact = () => {
 
         </div>
       </section>
-      
+
       {/* Map Section */}
       <section style={{ height: '400px', width: '100%', backgroundColor: '#e2e8f0' }}>
-        <iframe 
-          title="PRSEC Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3549.4!2d77.94!3d27.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397477ef11eb5637%3A0x81852c0f54f1ee86!2sShastripuram%20Heights!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
-          width="100%" 
-          height="100%" 
-          style={{ border: 0 }} 
-          allowFullScreen="" 
+        <iframe
+          title="PRSECS Location"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3549.4!2d77.94!3d27.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397477ef11eb5637%3A0x81852c0f54f1ee86!2sShastripuram%20Heights!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen=""
           referrerPolicy="no-referrer-when-downgrade">
         </iframe>
       </section>

@@ -1,21 +1,18 @@
 import React from 'react';
 import { Target, Eye, Factory, Award } from 'lucide-react';
 import { motion } from 'framer-motion';
+import HeroSlider from '../components/HeroSlider';
 
 const About = () => {
   return (
     <div className="page-wrapper">
-      <div className="hero" style={{ minHeight: '40vh' }}>
-        <img 
-          src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?q=80&w=2000&auto=format&fit=crop" 
-          alt="Business Meeting" 
-          className="hero-bg" 
-        />
-        <div className="container hero-content" style={{ textAlign: 'center' }}>
-          <h1 style={{ fontSize: '3rem' }}>About PRSEC</h1>
-          <p>Excellence in Solar Energy and Business Consultancy</p>
-        </div>
-      </div>
+      <HeroSlider
+        title="About"
+        highlightText="PRSECS"
+        subtitle="Excellence in Solar Energy and Business Consultancy"
+        images={[process.env.PUBLIC_URL + "/images/about_banner.png"]}
+        imagePosition="center 42%"
+      />
 
       <section className="section-padding">
         <div className="container">
@@ -28,13 +25,13 @@ const About = () => {
             >
               <h2 style={{ color: 'var(--color-navy)', fontSize: '2.5rem' }}>Our History</h2>
               <p style={{ marginBottom: '1.5rem', fontSize: '1.1rem', color: 'var(--color-text)' }}>
-                <strong>PR Solar Enterprise & Consultancy Service</strong> established its roots in business consultancy in <strong>2016</strong>, offering unparalleled guidance in certification processes and audits. 
+                <strong>PR Solar Enterprise & Consultancy Service</strong> established its roots in business consultancy in <strong>2016</strong>, offering unparalleled guidance in certification processes and audits.
               </p>
               <p style={{ marginBottom: '1.5rem', fontSize: '1.1rem', color: 'var(--color-text)' }}>
                 In <strong>2022</strong>, driven by a vision for a greener future, we established our solar enterprise. Today, we are a leading provider of solar equipment and EPC services, handling domestic, institutional, and industrial projects ranging from <strong>1KW to 10MW</strong>.
               </p>
             </motion.div>
-            <motion.div 
+            <motion.div
               className="glass-card"
               initial={{ opacity: 0, scale: 0.85, rotate: -2 }}
               whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -46,7 +43,7 @@ const About = () => {
                 <h3 className="mobile-heading-md" style={{ margin: 0, fontSize: '1.8rem' }}>Manufacturing Power</h3>
               </div>
               <p style={{ color: 'var(--color-text)' }}>
-                We pride ourselves on an exceptional production capacity of <strong>75MW</strong>. Our cutting-edge facility produces high-quality PV modules using premium MONO PERC and Polycrystalline (DCR and Non-DCR) solar cells. 
+                We pride ourselves on an exceptional production capacity of <strong>75MW</strong>. Our cutting-edge facility produces high-quality PV modules using premium MONO PERC and Polycrystalline (DCR and Non-DCR) solar cells.
               </p>
               <ul style={{ marginTop: '1.5rem', listStyle: 'none' }}>
                 <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
@@ -66,7 +63,7 @@ const About = () => {
 
       <section className="section-padding" style={{ backgroundColor: 'var(--color-gray-light)' }}>
         <div className="container grid-2-gap2">
-          <motion.div 
+          <motion.div
             className="glass-card-dark"
             initial={{ opacity: 0, y: 50, rotateX: 20 }}
             whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
@@ -77,13 +74,13 @@ const About = () => {
             <Target size={48} color="var(--color-gold)" style={{ marginBottom: '1rem' }} />
             <h2 style={{ color: 'var(--color-gold)' }}>Our Mission</h2>
             <p>
-              To provide the best services and products to our customers as per their requirements. We aim to spread the message of solar energy awareness. Through our dedication to stakeholders, we strive for non-stop development and utmost purchaser satisfaction. 
+              To provide the best services and products to our customers as per their requirements. We aim to spread the message of solar energy awareness. Through our dedication to stakeholders, we strive for non-stop development and utmost purchaser satisfaction.
             </p>
             <p style={{ marginTop: '1rem' }}>
               We are committed to offering reliable, long-lasting sun strength gadgets. Additionally, we spread crucial knowledge regarding certifications and audits to all MSMEs, supporting them to become competent on a national and international level.
             </p>
           </motion.div>
-          <motion.div 
+          <motion.div
             className="glass-card-dark"
             initial={{ opacity: 0, y: 50, rotateX: -20 }}
             whileInView={{ opacity: 1, y: 0, rotateX: 0 }}

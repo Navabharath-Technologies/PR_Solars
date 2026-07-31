@@ -11,7 +11,7 @@ const Footer = () => {
         {/* Brand & Mission */}
         <div>
           <Link to="/" className="logo-text" style={{ marginBottom: '1rem', display: 'inline-block' }}>
-            <img src="https://www.prsecs.com/uploads/settings/1775539126.webp" alt="PRSEC Logo" style={{ height: '60px' }} />
+            <img src={process.env.PUBLIC_URL + "/images/logo.png"} alt="PRSECS Logo" style={{ height: '90px' }} />
           </Link>
           <p style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.9rem' }}>
             Empowering sustainable growth and quality excellence through premium solar solutions and professional certification consultancy since 2016.

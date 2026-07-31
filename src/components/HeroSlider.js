@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-const HeroSlider = ({ title, highlightText, subtitle, images, children, isFullScreen = false }) => {
+const HeroSlider = ({ title, highlightText, subtitle, images, children, isFullScreen = false, imagePosition = 'center' }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -12,7 +12,7 @@ const HeroSlider = ({ title, highlightText, subtitle, images, children, isFullSc
   }, [images]);
 
   return (
-    <div className="hero" style={{ minHeight: isFullScreen ? '100vh' : '40vh' }}>
+    <div className="hero" style={{ minHeight: isFullScreen ? '100vh' : '400px' }}>
       {images.map((img, index) => (
         <img
           key={index}
@@ -28,7 +28,7 @@ const HeroSlider = ({ title, highlightText, subtitle, images, children, isFullSc
             width: '100%',
             height: '100%',
             objectFit: 'cover',
-            objectPosition: 'center 25%',
+            objectPosition: imagePosition,
             zIndex: 1
           }}
         />

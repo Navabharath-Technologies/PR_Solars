@@ -36,9 +36,9 @@ const Home = () => {
         isFullScreen={true}
         title={<>Empowering <span className="highlight" style={{ fontStyle: 'italic' }}>Sustainable</span> Growth<br/>& Quality Excellence</>}
         highlightText=""
-        subtitle="PR Solar Enterprise & Consultancy Service (PRSEC) provides state-of-the-art solar energy solutions and premium business certification consultancy. From 1KW to 10MW solar projects to complete ZED, ISO, and BIS certifications."
+        subtitle="PR Solar Enterprise & Consultancy Service (PRSECS) provides state-of-the-art solar energy solutions and premium business certification consultancy. From 1KW to 10MW solar projects to complete ZED, ISO, and BIS certifications."
         images={[
-          "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2072&auto=format&fit=crop",
+          process.env.PUBLIC_URL + "/images/home_banner.png",
           consultancyBanner
         ]}
       >

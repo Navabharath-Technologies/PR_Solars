@@ -1,5 +1,6 @@
 import React from 'react';
 import { SunMedium, Settings, BatteryCharging, ArrowUpRight, Maximize } from 'lucide-react';
+import HeroSlider from '../components/HeroSlider';
 
 const Products = () => {
   const products = [
@@ -37,17 +38,12 @@ const Products = () => {
 
   return (
     <div className="page-wrapper">
-      <div className="hero" style={{ minHeight: '40vh' }}>
-        <img 
-          src="https://images.unsplash.com/photo-1592833159155-c62df1b65634?q=80&w=2000&auto=format&fit=crop" 
-          alt="Solar Panels" 
-          className="hero-bg" 
-        />
-        <div className="container hero-content" style={{ textAlign: 'center' }}>
-          <h1 className="hero-title">Solar Solutions & Products</h1>
-          <p>Premium On-Grid, Off-Grid, and Hybrid Systems</p>
-        </div>
-      </div>
+      <HeroSlider
+        title="Solar Solutions"
+        highlightText="& Products"
+        subtitle="Premium On-Grid, Off-Grid, and Hybrid Systems"
+        images={[process.env.PUBLIC_URL + "/images/products_banner.png"]}
+      />
 
       <section className="section-padding" style={{ backgroundColor: 'var(--color-gray-light)' }}>
         <div className="container">

@@ -9,14 +9,15 @@ import { motion } from 'framer-motion';
 const Consultancy = () => {
   return (
     <div className="page-wrapper">
-      <HeroSlider 
+      <HeroSlider
         title="Consultancy Services"
         highlightText="& Expertise"
         subtitle="Expert Certification Processes and Audits Since 2016"
         images={[
-          "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2000&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2000&auto=format&fit=crop"
+          process.env.PUBLIC_URL + "/images/consultancy_banner_1.png",
+          process.env.PUBLIC_URL + "/images/consultancy_banner_2.png"
         ]}
+        imagePosition="center 55%"
       />
 
       {/* International */}
@@ -30,7 +31,7 @@ const Consultancy = () => {
             <h3>ISO 9001:2015</h3>
             <p><strong>International Organization for Standardization</strong></p>
             <p style={{ color: 'var(--color-text)', marginTop: '0.5rem' }}>
-              The international standard for a Quality Management System (QMS). PRSEC supports MSMEs in ISO certifications and we have certified Assessors/Consultants in ISO 9001:2015.
+              The international standard for a Quality Management System (QMS). PRSECS supports MSMEs in ISO certifications and we have certified Assessors/Consultants in ISO 9001:2015.
             </p>
           </TiltCard>
         </div>
@@ -43,14 +44,14 @@ const Consultancy = () => {
             <Building size={40} color="var(--color-gold)" className="mobile-icon" />
             <h2 className="mobile-heading-lg" style={{ fontSize: '2.5rem', margin: 0, color: 'var(--color-navy)' }}>Central Schemes (QCI & Gov)</h2>
           </div>
-          
+
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
             <TiltCard className="glass-card-dark">
               <h3 style={{ color: 'var(--color-gold)' }}>ZED (QCI)</h3>
               <p><strong>Zero Defect Zero Effect</strong></p>
-              <p style={{ fontSize: '0.9rem', marginTop: '0.5rem' }}>A certification scheme for MSMEs to encourage the manufacture of high-quality goods with zero defects and zero environmental effect. PRSEC is an <strong>Organizing Partner</strong> with certified assessors and consultants. (Website: zed.msme.gov.in)</p>
+              <p style={{ fontSize: '0.9rem', marginTop: '0.5rem' }}>A certification scheme for MSMEs to encourage the manufacture of high-quality goods with zero defects and zero environmental effect. PRSECS is an <strong>Organizing Partner</strong> with certified assessors and consultants. (Website: zed.msme.gov.in)</p>
             </TiltCard>
-            
+
             <TiltCard className="glass-card-dark">
               <h3 style={{ color: 'var(--color-gold)' }}>GEM OEM (QCI)</h3>
               <p><strong>Government e-Marketplace</strong></p>
@@ -78,7 +79,7 @@ const Consultancy = () => {
               <h3 style={{ color: 'var(--color-gold)' }}>Skill Development (NSDC)</h3>
               <p style={{ fontSize: '0.9rem', marginTop: '0.5rem' }}>Our team works in Skill India/PMKVY as assessors across different skill councils. We consult for Training Centers/Providers.</p>
             </TiltCard>
-            
+
             <TiltCard className="glass-card-dark" style={{ gridColumn: '1 / -1', flexDirection: 'row', gap: '2rem' }}>
               <div style={{ flex: 1 }}>
                 <h3 style={{ color: 'var(--color-gold)' }}>BIS</h3>
@@ -90,9 +91,9 @@ const Consultancy = () => {
               </div>
             </TiltCard>
           </div>
-          
+
           <div style={{ display: 'flex', marginTop: '4rem', flexWrap: 'wrap', backgroundColor: 'var(--color-white)', borderRadius: '24px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}>
-            <motion.div 
+            <motion.div
               style={{ flex: '1 1 400px', padding: '3rem', color: 'var(--color-text)' }}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -123,7 +124,7 @@ const Consultancy = () => {
                 </a>
               </div>
             </motion.div>
-            <motion.div 
+            <motion.div
               style={{ flex: '1 1 300px', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'var(--color-navy)', padding: '3rem' }}
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
@@ -145,7 +146,7 @@ const Consultancy = () => {
             <Landmark size={40} color="var(--color-navy)" className="state-heading-icon" />
             <h2 className="state-heading-text" style={{ fontSize: '2.5rem', margin: 0 }}>State Level: UP DIC</h2>
           </div>
-          <div style={{ 
+          <div style={{
             background: 'linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(245,247,250,1) 100%)',
             border: '1px solid rgba(212, 175, 55, 0.4)',
             boxShadow: '0 20px 40px rgba(0,0,0,0.06)',
@@ -157,20 +158,20 @@ const Consultancy = () => {
             <div style={{ position: 'absolute', top: '-30px', right: '-20px', opacity: 0.03, transform: 'rotate(15deg)', pointerEvents: 'none' }}>
               <Landmark size={300} color="var(--color-navy)" />
             </div>
-            
+
             <div className="tus-card-header" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '1.2rem', marginBottom: '1.5rem', borderBottom: '2px solid rgba(212, 175, 55, 0.15)', paddingBottom: '1.5rem' }}>
               <div style={{ padding: '1rem', background: 'rgba(212, 175, 55, 0.15)', borderRadius: '16px', display: 'flex' }}>
                 <Landmark size={36} color="var(--color-gold)" className="tus-card-icon" />
               </div>
               <h3 className="tus-card-title" style={{ margin: 0, fontSize: '2.2rem', color: 'var(--color-navy)' }}>The Upgradation Scheme (TUS)</h3>
             </div>
-            
+
             <p style={{ marginBottom: '2rem', color: 'var(--color-text)', fontSize: '1.1rem', lineHeight: '1.8', maxWidth: '900px' }}>
               Run by the Department of MSME & Export Promotion, Uttar Pradesh, through local DICs. The objective is to help MSMEs upgrade technology, improve quality, and adopt green practices.
             </p>
-            
+
             <h4 style={{ color: 'var(--color-gold)', marginBottom: '1.5rem', fontSize: '1.2rem', letterSpacing: '0.5px' }}>Key Financial Benefits we help you secure:</h4>
-            
+
             <ul style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', listStyle: 'none', padding: 0 }}>
               {[
                 { title: "Capital Subsidy", desc: "Up to 50% assistance (max ₹5 Lakh) on plant & machinery." },
@@ -179,9 +180,9 @@ const Consultancy = () => {
                 { title: "IPR & Branding", desc: "50% reimbursement for trademark (max ₹2 Lakh) & marketing (max ₹1 Lakh)." },
                 { title: "Certifications", desc: "Financial assistance for obtaining BIS, FSSAI, or ZED." }
               ].map((benefit, idx) => (
-                <li key={idx} style={{ 
-                  display: 'flex', 
-                  gap: '1rem', 
+                <li key={idx} style={{
+                  display: 'flex',
+                  gap: '1rem',
                   alignItems: 'flex-start',
                   background: 'rgba(255, 255, 255, 0.9)',
                   padding: '1.5rem',
@@ -191,11 +192,11 @@ const Consultancy = () => {
                   transition: 'transform 0.3s ease',
                   cursor: 'default'
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-3px)'}
-                onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+                  onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-3px)'}
+                  onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
                 >
                   <div style={{ background: 'var(--color-navy)', padding: '0.6rem', borderRadius: '50%', display: 'flex', flexShrink: 0 }}>
-                    <CheckCircle2 color="var(--color-gold)" size={20}/>
+                    <CheckCircle2 color="var(--color-gold)" size={20} />
                   </div>
                   <div>
                     <strong style={{ display: 'block', color: 'var(--color-navy)', marginBottom: '0.4rem', fontSize: '1.1rem' }}>{benefit.title}</strong>

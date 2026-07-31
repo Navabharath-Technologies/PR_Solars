@@ -6,6 +6,7 @@ import About from './pages/About';
 import Products from './pages/Products';
 import Consultancy from './pages/Consultancy';
 import Team from './pages/Team';
+import Careers from './pages/Careers';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
@@ -25,6 +26,7 @@ function App() {
             <Route path="/products" element={<Products />} />
             <Route path="/consultancy" element={<Consultancy />} />
             <Route path="/team" element={<Team />} />
+            <Route path="/careers" element={<Careers />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>

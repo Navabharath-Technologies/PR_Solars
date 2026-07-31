@@ -33,9 +33,9 @@ const Navbar = () => {
   return (
     <header className="header" style={headerStyle}>
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', position: 'relative' }}>
-        <Link to="/" className="logo-text">
-          <img src="https://www.prsecs.com/uploads/settings/1775539126.webp" alt="PRSEC Logo" style={{ height: '50px' }} />
-        </Link>
+        <a href="/" className="logo-text">
+          <img src={process.env.PUBLIC_URL + "/images/logo.png"} alt="PRSECS Logo" style={{ height: '75px' }} />
+        </a>
         
         <div className="mobile-menu-btn" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <X size={28} color="#fff" /> : <Menu size={28} color="#fff" />}
@@ -47,6 +47,7 @@ const Navbar = () => {
           <NavLink to="/products">Solar Solutions</NavLink>
           <NavLink to="/consultancy">Consultancy</NavLink>
           <NavLink to="/team">Team</NavLink>
+          <NavLink to="/careers">Careers</NavLink>
           <NavLink to="/contact">Contact Us</NavLink>
         </nav>
       </div>
