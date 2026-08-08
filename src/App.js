@@ -8,6 +8,7 @@ import Consultancy from './pages/Consultancy';
 import Team from './pages/Team';
 import Careers from './pages/Careers';
 import Contact from './pages/Contact';
+import Gallery from './pages/Gallery';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import StickyWidgets from './components/StickyWidgets';
@@ -28,6 +29,7 @@ function App() {
             <Route path="/team" element={<Team />} />
             <Route path="/careers" element={<Careers />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/gallery" element={<Gallery />} />
           </Routes>
         </main>
         <Footer />

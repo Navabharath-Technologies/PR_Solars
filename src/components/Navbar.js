@@ -43,12 +43,13 @@ const Navbar = () => {
 
         <nav className={`nav-links ${menuOpen ? 'active' : ''}`}>
           <NavLink to="/" end>Home</NavLink>
-          <NavLink to="/about">About Us</NavLink>
-          <NavLink to="/products">Solar Solutions</NavLink>
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/products">Solar</NavLink>
           <NavLink to="/consultancy">Consultancy</NavLink>
           <NavLink to="/team">Team</NavLink>
+          <NavLink to="/gallery">Gallery</NavLink>
           <NavLink to="/careers">Careers</NavLink>
-          <NavLink to="/contact">Contact Us</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
         </nav>
       </div>
     </header>

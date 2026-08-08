@@ -1,0 +1,150 @@
+
+.gallery-section {
+  padding: 80px 0;
+}
+
+.gallery-grid {
+  column-count: 3;
+  column-gap: 25px;
+  margin-top: 40px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 35px;
+  justify-content: center;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 16px; /* Smoother border radius */
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* More subtle, elegant shadow */
+  background: white;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  margin-bottom: 25px;
+  break-inside: avoid; /* Prevents item from breaking across columns */
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 36, 77, 0.15); /* Tinted shadow matching brand */
+}
+
+.image-item {
+  /* No fixed aspect ratio to prevent cropping */
+}
+
+.image-item img {
+  width: 100%;
+  height: auto; /* Allow natural height to prevent cropping */
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.image-item:hover img {
+  transform: scale(1.08); /* Smoother and larger zoom effect */
+}
+
+.video-item {
+  aspect-ratio: 16 / 9;
+  background-color: #000;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.video-item video {
+  border-radius: 16px;
+}
+
+/* --- Overlay & Lightbox Effects --- */
+.image-item {
+  cursor: pointer;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 16, 74, 0.6); /* Navy with opacity */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.image-item:hover .image-overlay {
+  opacity: 1;
+}
+
+.image-overlay svg {
+  transform: scale(0.5);
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.image-item:hover .image-overlay svg {
+  transform: scale(1);
+}
+
+/* Lightbox styles */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 8, 41, 0.95); /* Extremely dark navy */
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  backdrop-filter: blur(8px);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 10000;
+  padding: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.lightbox-close:hover {
+  transform: scale(1.2) rotate(90deg);
+}
+
+.lightbox-image {
+  max-width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.8);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .gallery-grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    column-count: 1;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
