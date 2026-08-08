@@ -54,8 +54,10 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-.video-item video {
+.video-item iframe {
   border-radius: 16px;
+  width: 100%;
+  height: 100%;
 }
 
 /* --- Overlay & Lightbox Effects --- */

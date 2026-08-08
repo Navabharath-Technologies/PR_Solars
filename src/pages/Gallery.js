@@ -24,19 +24,11 @@ const Gallery = () => {
   ];
 
   const zedVideos = [
-    '/videos/gallery/zed-hd-video-1.mp4',
-    '/videos/gallery/zed-hd-video-2.mp4',
+    'https://drive.google.com/file/d/1M9n1EzL2vIZD9_D248Rfs5XkRnvlun5W/preview',
+    'https://drive.google.com/file/d/1LhyRuEhweSvV3XebRqSD-K1Pwz1zvt-_/preview',
   ];
 
-  const handleVideoPlay = (event) => {
-    const allVideos = document.querySelectorAll('.video-item video');
-    allVideos.forEach((video) => {
-      // Pause all other videos except the one that just started playing
-      if (video !== event.target) {
-        video.pause();
-      }
-    });
-  };
+
 
   return (
     <div className="page-wrapper">
@@ -99,16 +91,14 @@ const Gallery = () => {
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0, 36, 77, 0.2)" }}
               >
-                <video 
-                  controls 
+                <iframe 
+                  src={src} 
                   width="100%" 
-                  preload="metadata" 
-                  style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover' }}
-                  onPlay={handleVideoPlay}
-                >
-                  <source src={process.env.PUBLIC_URL + src} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                  height="100%" 
+                  style={{ border: 'none', display: 'block', borderRadius: '16px' }}
+                  allow="autoplay"
+                  title={`ZED Video ${index + 1}`}
+                ></iframe>
               </motion.div>
             ))}
           </div>
