@@ -6,6 +6,34 @@ import './Gallery.css';
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [resetKeys, setResetKeys] = useState({});
+
+  React.useEffect(() => {
+    const handleBlur = () => {
+      setTimeout(() => {
+        const activeElement = document.activeElement;
+        if (activeElement && activeElement.tagName === 'IFRAME') {
+          const id = activeElement.getAttribute('data-index');
+          if (id !== null) {
+            const activeIndex = parseInt(id, 10);
+            setResetKeys(prev => {
+              const newKeys = { ...prev };
+              // Increment keys for all other videos to force them to remount/stop
+              for (let i = 0; i < 10; i++) {
+                if (i !== activeIndex) {
+                  newKeys[i] = (newKeys[i] || 0) + 1;
+                }
+              }
+              return newKeys;
+            });
+          }
+        }
+      }, 50);
+    };
+
+    window.addEventListener('blur', handleBlur);
+    return () => window.removeEventListener('blur', handleBlur);
+  }, []);
 
   const zedImages = [
     '/images/gallery/zed-1.jpeg',
@@ -90,8 +118,11 @@ const Gallery = () => {
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0, 36, 77, 0.2)" }}
+                onMouseLeave={() => { window.focus(); }}
               >
                 <iframe 
+                  key={`${index}-${resetKeys[index] || 0}`}
+                  data-index={index}
                   src={src} 
                   width="100%" 
                   height="100%" 

@@ -7,6 +7,7 @@ import Products from './pages/Products';
 import Consultancy from './pages/Consultancy';
 import Team from './pages/Team';
 import Careers from './pages/Careers';
+import Training from './pages/Training';
 import Contact from './pages/Contact';
 import Gallery from './pages/Gallery';
 import Footer from './components/Footer';
@@ -28,6 +29,7 @@ function App() {
             <Route path="/consultancy" element={<Consultancy />} />
             <Route path="/team" element={<Team />} />
             <Route path="/careers" element={<Careers />} />
+            <Route path="/training" element={<Training />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/gallery" element={<Gallery />} />
           </Routes>
