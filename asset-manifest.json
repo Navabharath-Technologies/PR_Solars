@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/PR_Solars/static/css/main.c9687ea3.css",
-    "main.js": "/PR_Solars/static/js/main.6f0a60fb.js",
+    "main.css": "/PR_Solars/static/css/main.ee138f44.css",
+    "main.js": "/PR_Solars/static/js/main.ea05022d.js",
     "static/js/453.8a7b724d.chunk.js": "/PR_Solars/static/js/453.8a7b724d.chunk.js",
     "static/media/consultancy-banner.png": "/PR_Solars/static/media/consultancy-banner.e1c7b98bd3748fd413fc.png",
     "static/media/zed-certification.jpeg": "/PR_Solars/static/media/zed-certification.5c2e3b68d9ac2cb7b6e4.jpeg",
     "index.html": "/PR_Solars/index.html",
-    "main.c9687ea3.css.map": "/PR_Solars/static/css/main.c9687ea3.css.map",
-    "main.6f0a60fb.js.map": "/PR_Solars/static/js/main.6f0a60fb.js.map",
+    "main.ee138f44.css.map": "/PR_Solars/static/css/main.ee138f44.css.map",
+    "main.ea05022d.js.map": "/PR_Solars/static/js/main.ea05022d.js.map",
     "453.8a7b724d.chunk.js.map": "/PR_Solars/static/js/453.8a7b724d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c9687ea3.css",
-    "static/js/main.6f0a60fb.js"
+    "static/css/main.ee138f44.css",
+    "static/js/main.ea05022d.js"
   ]
 }
