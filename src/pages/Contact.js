@@ -40,7 +40,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 style={{ fontSize: '1.2rem', marginBottom: '0.2rem' }}>Phone Numbers</h3>
-                  <p style={{ color: 'var(--color-text)' }}>+91 9917223340</p>
+                  <p style={{ color: 'var(--color-text)' }}>+91 80775 85201</p>
                   <p style={{ color: 'var(--color-text)' }}>+91 8218416906</p>
                   <p style={{ color: 'var(--color-text)' }}>+91 9927833340</p>
                 </div>

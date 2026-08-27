@@ -6,7 +6,7 @@ import { FaFacebookF, FaXTwitter, FaInstagram, FaYoutube } from 'react-icons/fa6
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '3rem', marginBottom: '2rem' }}>
+      <div className="container footer-grid" style={{ marginBottom: '2rem' }}>
         
         {/* Brand & Mission */}
         <div>
@@ -27,28 +27,33 @@ const Footer = () => {
         {/* Quick Links */}
         <div>
           <h3 style={{ color: 'var(--color-white)', fontSize: '1.2rem', marginBottom: '1rem' }}>Quick Links</h3>
-          <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+          <ul style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.8rem 1rem' }}>
+            <li><Link to="/" className="footer-link">Home</Link></li>
             <li><Link to="/about" className="footer-link">About Us</Link></li>
             <li><Link to="/products" className="footer-link">Solar Solutions</Link></li>
             <li><Link to="/consultancy" className="footer-link">Consultancy Services</Link></li>
             <li><Link to="/team" className="footer-link">Our Team</Link></li>
+            <li><Link to="/gallery" className="footer-link">Gallery</Link></li>
+            <li><Link to="/careers" className="footer-link">Careers</Link></li>
+            <li><Link to="/training" className="footer-link">Training</Link></li>
+            <li><Link to="/contact" className="footer-link">Contact</Link></li>
           </ul>
         </div>
 
         {/* Contact Info */}
         <div>
           <h3 style={{ color: 'var(--color-white)', fontSize: '1.2rem', marginBottom: '1rem' }}>Contact Us</h3>
-          <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-            <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem', color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.9rem' }}>
-              <MapPin size={18} color="var(--color-gold)" style={{ flexShrink: 0 }} />
+          <ul style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem', color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.9rem' }}>
+              <MapPin size={18} color="var(--color-gold)" style={{ flexShrink: 0, marginTop: '3px' }} />
               <span>1101, Kanchanjunga Tower, Shastripuram Heights, Agra-282007</span>
             </li>
-            <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.9rem' }}>
-              <Phone size={18} color="var(--color-gold)" />
-              <span>+91-9917223340</span>
+            <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem', color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.9rem' }}>
+              <Phone size={18} color="var(--color-gold)" style={{ flexShrink: 0, marginTop: '3px' }} />
+              <span>+91 80775 85201</span>
             </li>
-            <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.9rem' }}>
-              <Mail size={18} color="var(--color-gold)" />
+            <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem', color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.9rem' }}>
+              <Mail size={18} color="var(--color-gold)" style={{ flexShrink: 0, marginTop: '3px' }} />
               <span>sales@prsecs.com</span>
             </li>
           </ul>
