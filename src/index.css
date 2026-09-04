@@ -186,7 +186,6 @@ ul {
 
 .btn-primary:hover {
   background: linear-gradient(to right, #AA771C, #FBF5B7, #B38728, #FCF6BA, #BF953F);
-  transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
 }
 
