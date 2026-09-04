@@ -35,11 +35,23 @@ const Careers = () => {
 
     const data = new FormData();
     data.append("subject", `New Job Application: ${formData.role} - ${formData.name}`);
-    data.append("name", formData.name);
-    data.append("email", formData.email);
-    data.append("phone", formData.phone);
-    data.append("role", formData.role);
-    data.append("coverLetter", formData.coverLetter);
+    
+    // Forminit free tier hides text fields in the email body.
+    // WORKAROUND: We pack all the text data into a .txt file and attach it alongside the resume!
+    const detailsText = `
+APPLICANT DETAILS
+-----------------
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Role Applied For: ${formData.role}
+
+COVER LETTER:
+${formData.coverLetter}
+    `.trim();
+
+    const detailsBlob = new Blob([detailsText], { type: 'text/plain' });
+    data.append("fi-file-applicant-details", detailsBlob, "Applicant_Details.txt");
     
     if (formData.resume) {
       data.append("fi-file-resume", formData.resume);
