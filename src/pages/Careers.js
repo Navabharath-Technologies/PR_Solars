@@ -28,8 +28,48 @@ const Careers = () => {
     document.getElementById('application-form').scrollIntoView({ behavior: 'smooth' });
   };
 
+  const validateForm = () => {
+    // Matches any character repeated 4 or more times consecutively
+    const noRepeatsRegex = /(.)\1{3,}/; 
+
+    // Name validation
+    if (formData.name.trim().length < 3) {
+      return "Name must be at least 3 letters long.";
+    }
+    if (noRepeatsRegex.test(formData.name)) {
+      return "Name cannot contain the same letter repeated 4 or more times.";
+    }
+
+    // Email validation
+    if (!formData.email.toLowerCase().endsWith("@gmail.com")) {
+      return "Email must be a @gmail.com address.";
+    }
+    const emailPrefix = formData.email.split("@")[0];
+    if (emailPrefix.length < 3) {
+      return "Email must have at least 3 characters before @gmail.com.";
+    }
+    if (noRepeatsRegex.test(formData.email)) {
+      return "Email cannot contain the same letter repeated 4 or more times.";
+    }
+
+    // Phone validation (10 digits, starts with 6, 7, 8, or 9)
+    const phoneRegex = /^[6-9]\d{9}$/;
+    if (!phoneRegex.test(formData.phone)) {
+      return "Phone number must be exactly 10 digits and start with 6, 7, 8, or 9.";
+    }
+
+    return null; // Valid
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const validationError = validateForm();
+    if (validationError) {
+      setSubmitStatus({ type: 'error', message: validationError });
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitStatus(null);
 
