@@ -34,6 +34,7 @@ const Careers = () => {
     setSubmitStatus(null);
 
     const data = new FormData();
+    data.append("access_key", "cb8e7236-4179-4b6f-be34-61e1194ada94");
     data.append("subject", `New Job Application: ${formData.role} - ${formData.name}`);
     data.append("name", formData.name);
     data.append("email", formData.email);
@@ -42,11 +43,11 @@ const Careers = () => {
     data.append("coverLetter", formData.coverLetter);
     
     if (formData.resume) {
-      data.append("fi-file-resume", formData.resume);
+      data.append("resume", formData.resume);
     }
 
     try {
-      const response = await fetch("https://forminit.com/f/whc3o9o6ak2", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: data
       });
