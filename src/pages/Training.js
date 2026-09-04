@@ -21,7 +21,7 @@ const Training = () => {
 
   const handlePasskeySubmit = (e) => {
     e.preventDefault();
-    if (passkey === 'admin123') { // Placeholder passkey
+    if (passkey === '1101') { // Placeholder passkey
       window.open(modalState.url, '_blank', 'noopener,noreferrer');
       setModalState({ isOpen: false, url: '' });
     } else {
@@ -43,7 +43,7 @@ const Training = () => {
       <section className="section-padding">
         <div className="container">
           <div className="grid-2-gap2" style={{ maxWidth: '900px', margin: '0 auto' }}>
-            
+
             <a href="https://training.zed.org.in/professional/Training/Index/64" onClick={(e) => handleCardClick(e, "https://training.zed.org.in/professional/Training/Index/64")} style={{ textDecoration: 'none' }}>
               <div className="glass-card" style={{ height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', cursor: 'pointer' }}>
                 <div style={{ marginBottom: '1.5rem', color: 'var(--color-gold)' }}>
@@ -87,7 +87,7 @@ const Training = () => {
           backdropFilter: 'blur(5px)'
         }}>
           <div className="glass-card" style={{ position: 'relative', width: '90%', maxWidth: '400px', padding: '2rem', height: 'auto', minHeight: 'auto' }}>
-            <button 
+            <button
               onClick={() => setModalState({ isOpen: false, url: '' })}
               style={{ position: 'absolute', top: '1rem', right: '1rem', background: 'none', border: 'none', cursor: 'pointer', color: 'var(--color-navy)' }}
             >

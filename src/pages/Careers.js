@@ -46,7 +46,7 @@ const Careers = () => {
     }
 
     try {
-      const response = await fetch("https://forminit.com/f/nej048zxjzo", {
+      const response = await fetch("https://forminit.com/f/whc3o9o6ak2", {
         method: "POST",
         body: data
       });
