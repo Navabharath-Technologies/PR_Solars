@@ -51,15 +51,13 @@ const Careers = () => {
         body: data
       });
 
-      const result = await response.json();
-      
       if (response.ok) {
         setSubmitStatus({ type: 'success', message: 'Application sent successfully! Our HR team will contact you soon.' });
         setFormData({ name: '', email: '', phone: '', role: '', resume: null, coverLetter: '' });
         e.target.reset(); // Clear the file input
       } else {
-        console.error("Forminit API Error:", result.message);
-        setSubmitStatus({ type: 'error', message: result.message || 'Something went wrong. Please try again.' });
+        console.error("Forminit API Error: Status", response.status);
+        setSubmitStatus({ type: 'error', message: 'Something went wrong. Please try again.' });
       }
     } catch (error) {
       console.error("Form submission error:", error);
