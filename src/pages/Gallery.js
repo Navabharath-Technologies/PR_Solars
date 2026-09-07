@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import HeroSlider from '../components/HeroSlider';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ZoomIn } from 'lucide-react';
+import { X, ZoomIn, PlayCircle } from 'lucide-react';
 import './Gallery.css';
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [resetKeys, setResetKeys] = useState({});
+  const [playingVideos, setPlayingVideos] = useState({});
 
   React.useEffect(() => {
     const handleBlur = () => {
@@ -45,10 +46,10 @@ const Gallery = () => {
     '/images/gallery/zed-7.jpeg',
     '/images/gallery/zed-8.jpeg',
     '/images/gallery/zed-9.jpeg',
-    '/images/gallery/chatgpt-1.png',
-    '/images/gallery/chatgpt-2.png',
-    '/images/gallery/chatgpt-3.png',
-    '/images/gallery/chatgpt-4.png'
+    '/images/gallery/chatgpt-1.jpg',
+    '/images/gallery/chatgpt-2.jpg',
+    '/images/gallery/chatgpt-3.jpg',
+    '/images/gallery/chatgpt-4.jpg'
   ];
 
   const zedVideos = [
@@ -120,16 +121,46 @@ const Gallery = () => {
                 whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0, 36, 77, 0.2)" }}
                 onMouseLeave={() => { window.focus(); }}
               >
-                <iframe 
-                  key={`${index}-${resetKeys[index] || 0}`}
-                  data-index={index}
-                  src={src} 
-                  width="100%" 
-                  height="100%" 
-                  style={{ border: 'none', display: 'block', borderRadius: '16px' }}
-                  allow="autoplay"
-                  title={`ZED Video ${index + 1}`}
-                ></iframe>
+                {playingVideos[index] ? (
+                  <iframe 
+                    key={`${index}-${resetKeys[index] || 0}`}
+                    data-index={index}
+                    src={src} 
+                    width="100%" 
+                    height="100%" 
+                    style={{ border: 'none', display: 'block', borderRadius: '16px' }}
+                    allow="autoplay"
+                    title={`ZED Video ${index + 1}`}
+                    loading="lazy"
+                  ></iframe>
+                ) : (
+                  <div 
+                    onClick={() => setPlayingVideos(prev => ({...prev, [index]: true}))}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      backgroundColor: '#00244d',
+                      borderRadius: '16px',
+                      cursor: 'pointer',
+                      position: 'relative',
+                      minHeight: '250px'
+                    }}
+                  >
+                    <div style={{
+                      position: 'absolute',
+                      top: 0, left: 0, right: 0, bottom: 0,
+                      backgroundImage: 'url("https://via.placeholder.com/600x400/00244d/ffffff?text=Video+Thumbnail")',
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      opacity: 0.6,
+                      borderRadius: '16px'
+                    }} />
+                    <PlayCircle size={64} color="white" style={{ position: 'relative', zIndex: 10 }} />
+                  </div>
+                )}
               </motion.div>
             ))}
           </div>
