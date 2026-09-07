@@ -81,10 +81,10 @@ const Gallery = () => {
               <motion.div 
                 key={index} 
                 className="gallery-item image-item"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.6, delay: (index % 4) * 0.15 }}
+                viewport={{ once: true, amount: 0.1 }}
+                transition={{ duration: 0.5, delay: (index % 4) * 0.2 }}
                 onClick={() => setSelectedImage(process.env.PUBLIC_URL + src)}
               >
                 <div className="image-overlay">
@@ -152,7 +152,7 @@ const Gallery = () => {
                     <div style={{
                       position: 'absolute',
                       top: 0, left: 0, right: 0, bottom: 0,
-                      backgroundImage: 'url("https://via.placeholder.com/600x400/00244d/ffffff?text=Video+Thumbnail")',
+                      backgroundImage: `url(${process.env.PUBLIC_URL + zedImages[index % zedImages.length]})`,
                       backgroundSize: 'cover',
                       backgroundPosition: 'center',
                       opacity: 0.6,
