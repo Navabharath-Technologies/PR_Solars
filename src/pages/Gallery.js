@@ -136,7 +136,13 @@ const Gallery = () => {
                   ></iframe>
                 ) : (
                   <div 
-                    onClick={() => setPlayingVideos(prev => ({...prev, [index]: true}))}
+                    onClick={() => {
+                      if (window.innerWidth <= 768) {
+                        window.open(src, '_blank');
+                      } else {
+                        setPlayingVideos(prev => ({...prev, [index]: true}));
+                      }
+                    }}
                     style={{
                       width: '100%',
                       height: '100%',
