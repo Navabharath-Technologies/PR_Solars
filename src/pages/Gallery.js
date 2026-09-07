@@ -146,8 +146,7 @@ const Gallery = () => {
                       backgroundColor: '#00244d',
                       borderRadius: '16px',
                       cursor: 'pointer',
-                      position: 'relative',
-                      minHeight: '250px'
+                      position: 'relative'
                     }}
                   >
                     <div style={{
