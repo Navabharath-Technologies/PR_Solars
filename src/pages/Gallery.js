@@ -129,7 +129,8 @@ const Gallery = () => {
                     width="100%" 
                     height="100%" 
                     style={{ border: 'none', display: 'block', borderRadius: '16px' }}
-                    allow="autoplay"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowFullScreen
                     title={`ZED Video ${index + 1}`}
                     loading="lazy"
                   ></iframe>
