@@ -30,7 +30,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 style={{ fontSize: '1.2rem', marginBottom: '0.2rem' }}>Corporate Office</h3>
-                  <p style={{ color: 'var(--color-text)' }}>1101, Kanchanjunga Tower, Shastripuram Heights,<br />Agra, Uttar Pradesh, 282007</p>
+                  <p style={{ color: 'var(--color-text)' }}><a href="https://maps.google.com/?q=1101,+Kanchanjunga+Tower,+Shastripuram+Heights,+Agra-282007" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>1101, Kanchanjunga Tower, Shastripuram Heights,<br />Agra, Uttar Pradesh, 282007</a></p>
                 </div>
               </div>
 
@@ -40,8 +40,9 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 style={{ fontSize: '1.2rem', marginBottom: '0.2rem' }}>Phone Numbers</h3>
-                  <p style={{ color: 'var(--color-text)' }}>+91 80775 85201</p>
-                  <p style={{ color: 'var(--color-text)' }}>+91 8218416906</p>
+                  <p style={{ color: 'var(--color-text)' }}><a href="tel:+918077585201" style={{ color: 'inherit', textDecoration: 'none' }}>+91 80775 85201</a></p>
+                  <p style={{ color: 'var(--color-text)' }}><a href="tel:+918218416906" style={{ color: 'inherit', textDecoration: 'none' }}>+91 8218416906</a></p>
+                  <p style={{ color: 'var(--color-text)' }}><a href="tel:+919917223340" style={{ color: 'inherit', textDecoration: 'none' }}>+91 9917223340</a></p>
                 </div>
               </div>
 
@@ -51,9 +52,9 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 style={{ fontSize: '1.2rem', marginBottom: '0.2rem' }}>Email Addresses</h3>
-                  <p style={{ color: 'var(--color-text)' }}>sales@prsecs.com</p>
-                  <p style={{ color: 'var(--color-text)' }}>yogendrabhasker@prsecs.com</p>
-                  <p style={{ color: 'var(--color-text)' }}>satishnigam@prsecs.com</p>
+                  <p style={{ color: 'var(--color-text)' }}><a href="mailto:sales@prsecs.com" style={{ color: 'inherit', textDecoration: 'none' }}>sales@prsecs.com</a></p>
+                  <p style={{ color: 'var(--color-text)' }}><a href="mailto:yogendrabhasker@prsecs.com" style={{ color: 'inherit', textDecoration: 'none' }}>yogendrabhasker@prsecs.com</a></p>
+                  <p style={{ color: 'var(--color-text)' }}><a href="mailto:satishnigam@prsecs.com" style={{ color: 'inherit', textDecoration: 'none' }}>satishnigam@prsecs.com</a></p>
                 </div>
               </div>
 

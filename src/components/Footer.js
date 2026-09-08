@@ -46,15 +46,15 @@ const Footer = () => {
           <ul style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem', color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.9rem' }}>
               <MapPin size={18} color="var(--color-gold)" style={{ flexShrink: 0, marginTop: '3px' }} />
-              <span>1101, Kanchanjunga Tower, Shastripuram Heights, Agra-282007</span>
+              <a href="https://maps.google.com/?q=1101,+Kanchanjunga+Tower,+Shastripuram+Heights,+Agra-282007" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>1101, Kanchanjunga Tower, Shastripuram Heights, Agra-282007</a>
             </li>
             <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem', color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.9rem' }}>
               <Phone size={18} color="var(--color-gold)" style={{ flexShrink: 0, marginTop: '3px' }} />
-              <span>+91 80775 85201</span>
+              <a href="tel:+918077585201" style={{ color: 'inherit', textDecoration: 'none' }}>+91 80775 85201</a>
             </li>
             <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem', color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.9rem' }}>
               <Mail size={18} color="var(--color-gold)" style={{ flexShrink: 0, marginTop: '3px' }} />
-              <span>sales@prsecs.com</span>
+              <a href="mailto:sales@prsecs.com" style={{ color: 'inherit', textDecoration: 'none' }}>sales@prsecs.com</a>
             </li>
           </ul>
         </div>
