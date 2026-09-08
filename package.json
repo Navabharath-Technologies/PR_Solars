@@ -2,7 +2,7 @@
   "name": "pr-solars",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Navabharath-Technologies.github.io/PR_Solars",
+  "homepage": "https://prsecs.com",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
