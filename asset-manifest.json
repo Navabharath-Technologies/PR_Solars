@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.2b29f02b.css",
-    "main.js": "/static/js/main.04d58c72.js",
+    "main.js": "/static/js/main.fc09a952.js",
     "static/js/453.8a7b724d.chunk.js": "/static/js/453.8a7b724d.chunk.js",
     "static/media/consultancy-banner.png": "/static/media/consultancy-banner.e1c7b98bd3748fd413fc.png",
     "static/media/zed-certification.jpeg": "/static/media/zed-certification.4c6b2c033282a4cc039f.jpeg",
     "index.html": "/index.html",
     "main.2b29f02b.css.map": "/static/css/main.2b29f02b.css.map",
-    "main.04d58c72.js.map": "/static/js/main.04d58c72.js.map",
+    "main.fc09a952.js.map": "/static/js/main.fc09a952.js.map",
     "453.8a7b724d.chunk.js.map": "/static/js/453.8a7b724d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2b29f02b.css",
-    "static/js/main.04d58c72.js"
+    "static/js/main.fc09a952.js"
   ]
 }
