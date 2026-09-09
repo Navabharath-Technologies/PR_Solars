@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -32,6 +32,14 @@ function App() {
             <Route path="/training" element={<Training />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/gallery" element={<Gallery />} />
+            
+            {/* Redirects for old Google indexed links */}
+            <Route path="/about-us" element={<Navigate to="/about" replace />} />
+            <Route path="/contact-us" element={<Navigate to="/contact" replace />} />
+            <Route path="/services" element={<Navigate to="/consultancy" replace />} />
+            
+            {/* Catch-all for any other broken links */}
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
         <Footer />
