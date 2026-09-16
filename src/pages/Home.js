@@ -136,15 +136,15 @@ const Home = () => {
       <section className="section-padding">
         <div className="container" style={{ textAlign: 'center' }}>
           <h2 style={{ marginBottom: '3rem' }}>Trusted By Esteemed Organizations</h2>
-          <div className="clients-container" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '4rem', alignItems: 'center' }}>
-            <div className="glass-card scan-line-card" style={{ padding: '2rem 3rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <h3 style={{ margin: 0, color: 'var(--color-navy-dark)', fontSize: '1.2rem' }}>Power Grid Corporation<br/>Of India Limited</h3>
+          <div className="clients-container" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '2rem', alignItems: 'center' }}>
+            <div className="glass-card scan-line-card" style={{ padding: '2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', maxWidth: '350px', minHeight: '140px', boxSizing: 'border-box' }}>
+              <h3 style={{ margin: 0, color: 'var(--color-navy-dark)', fontSize: '1.2rem', textAlign: 'center' }}>Power Grid Corporation<br/>Of India Limited</h3>
             </div>
-            <div className="glass-card scan-line-card" style={{ padding: '2rem 3rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <h3 style={{ margin: 0, color: 'var(--color-navy-dark)', fontSize: '1.2rem' }}>Kendriya Vidyalaya<br/>Sangathan (KVS)</h3>
+            <div className="glass-card scan-line-card" style={{ padding: '2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', maxWidth: '350px', minHeight: '140px', boxSizing: 'border-box' }}>
+              <h3 style={{ margin: 0, color: 'var(--color-navy-dark)', fontSize: '1.2rem', textAlign: 'center' }}>Kendriya Vidyalaya<br/>Sangathan (KVS)</h3>
             </div>
-            <div className="glass-card scan-line-card" style={{ padding: '2rem 3rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <h3 style={{ margin: 0, color: 'var(--color-navy-dark)', fontSize: '1.2rem' }}>Punjab Agricultural<br/>University, Ludhiana</h3>
+            <div className="glass-card scan-line-card" style={{ padding: '2rem', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', maxWidth: '350px', minHeight: '140px', boxSizing: 'border-box' }}>
+              <h3 style={{ margin: 0, color: 'var(--color-navy-dark)', fontSize: '1.2rem', textAlign: 'center' }}>Punjab Agricultural<br/>University, Ludhiana</h3>
             </div>
           </div>
         </div>

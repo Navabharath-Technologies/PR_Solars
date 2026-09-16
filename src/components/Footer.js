@@ -10,12 +10,14 @@ const Footer = () => {
         
         {/* Brand & Mission */}
         <div>
-          <Link to="/" className="logo-text" style={{ marginBottom: '1rem', display: 'inline-block' }}>
-            <img src={process.env.PUBLIC_URL + "/images/logo.png"} alt="PRSECS Logo" style={{ height: '90px' }} />
-          </Link>
-          <p style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.9rem' }}>
-            Empowering sustainable growth and quality excellence through premium solar solutions and professional certification consultancy since 2016.
-          </p>
+          <div className="footer-brand-mobile-flex">
+            <Link to="/" className="logo-text" style={{ marginBottom: '1rem', display: 'inline-block' }}>
+              <img src={process.env.PUBLIC_URL + "/images/logo.png"} alt="PRSECS Logo" className="footer-logo-img" style={{ height: '90px' }} />
+            </Link>
+            <p className="footer-brand-text" style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.9rem' }}>
+              Empowering sustainable growth and quality excellence through premium solar solutions and professional certification consultancy since 2016.
+            </p>
+          </div>
           <div style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem' }}>
             <a href="https://www.facebook.com/prsecs" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Facebook"><FaFacebookF size={18} /></a>
             <a href="https://x.com/prsolarenter" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="X (Twitter)"><FaXTwitter size={18} /></a>

@@ -3,6 +3,22 @@ import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import HeroSlider from '../components/HeroSlider';
 
 const Contact = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const name = e.target[0].value;
+    const email = e.target[1].value;
+    const subject = e.target[2].value;
+    const message = e.target[3].value;
+    
+    if (!name || !email || !message) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+    
+    const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+    window.location.href = `mailto:sales@prsecs.com?subject=${encodeURIComponent(subject || 'Website Inquiry')}&body=${encodeURIComponent(body)}`;
+  };
+
   return (
     <div className="page-wrapper">
       <HeroSlider
@@ -75,12 +91,12 @@ const Contact = () => {
           <div>
             <div className="glass-card" style={{ marginBottom: '2rem' }}>
               <h3 style={{ marginBottom: '1.5rem', fontSize: '1.5rem' }}>Send us a Message</h3>
-              <form style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                <input type="text" placeholder="Your Name" style={{ padding: '1rem', borderRadius: '8px', border: '1px solid #cbd5e1', outline: 'none' }} />
-                <input type="email" placeholder="Your Email" style={{ padding: '1rem', borderRadius: '8px', border: '1px solid #cbd5e1', outline: 'none' }} />
+              <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                <input type="text" required placeholder="Your Name" style={{ padding: '1rem', borderRadius: '8px', border: '1px solid #cbd5e1', outline: 'none' }} />
+                <input type="email" required placeholder="Your Email" style={{ padding: '1rem', borderRadius: '8px', border: '1px solid #cbd5e1', outline: 'none' }} />
                 <input type="text" placeholder="Subject" style={{ padding: '1rem', borderRadius: '8px', border: '1px solid #cbd5e1', outline: 'none' }} />
-                <textarea placeholder="Your Message" rows="4" style={{ padding: '1rem', borderRadius: '8px', border: '1px solid #cbd5e1', outline: 'none', resize: 'vertical' }}></textarea>
-                <button type="button" className="btn-primary" style={{ justifyContent: 'center' }}>Submit Message</button>
+                <textarea required placeholder="Your Message" rows="4" style={{ padding: '1rem', borderRadius: '8px', border: '1px solid #cbd5e1', outline: 'none', resize: 'vertical' }}></textarea>
+                <button type="submit" className="btn-primary" style={{ justifyContent: 'center' }}>Submit Message</button>
               </form>
             </div>
           </div>

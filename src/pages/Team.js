@@ -13,7 +13,7 @@ const Team = () => {
   const leadership = [
     {
       name: "Preeti Manav",
-      role: "CEO / Managing Director",
+      role: "CEO",
       edu: "MA (History) - University of Agra",
       exp: "15+ years experience at 'RJ Plastic Yarn Industry', Nunhai Agra.",
       img: process.env.PUBLIC_URL + "/images/preeti_manav.png",
@@ -21,7 +21,7 @@ const Team = () => {
     },
     {
       name: "Rinki Nigam",
-      role: "CEO / Managing Director",
+      role: "CEO",
       edu: "MA (English) & B.Ed - University of Agra",
       exp: "15+ years experience at 'RJ Plastic Yarn Industry', Nunhai Agra.",
       img: process.env.PUBLIC_URL + "/images/rinki_nigam.png",
@@ -29,14 +29,14 @@ const Team = () => {
     },
     {
       name: "Satish Kumar Nigam",
-      role: "Director / General Manager",
+      role: "Director",
       edu: "B.E (Mech), M.Tech (Manufacturing and Automation)",
       exp: "20+ years industry exp. Certified ZED Assessor (4000+ Bronze), LEAN consultant (2023), GEM OEM auditor (2021).",
       img: process.env.PUBLIC_URL + "/images/satish_kumar_nigam.jpeg"
     },
     {
       name: "Yogender Bhaskar",
-      role: "Director / General Manager",
+      role: "Director",
       edu: "B.E in ECE",
       exp: "25+ years industry experience with extensive co-ordination expertise in various projects and Certified ZED Assessor (500+ Bronze).",
       img: process.env.PUBLIC_URL + "/images/yogendra_bhaskar.jpeg",
