@@ -1,5 +1,5 @@
-import React from 'react';
-import { Globe, Building, Landmark, CheckCircle2 } from 'lucide-react';
+import React, { useState } from 'react';
+import { Globe, Building, Landmark, CheckCircle2, Send, CheckCircle } from 'lucide-react';
 import zedCertification from '../assets/zed-certification.jpeg';
 import HeroSlider from '../components/HeroSlider';
 import AnimatedSection from '../components/AnimatedSection';
@@ -7,6 +7,101 @@ import TiltCard from '../components/TiltCard';
 import { motion } from 'framer-motion';
 
 const Consultancy = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const validateForm = () => {
+    // Matches any character repeated 4 or more times consecutively
+    const noRepeatsRegex = /(.)\1{3,}/; 
+
+    // Name validation
+    if (formData.name.trim().length < 3) {
+      return "Name must be at least 3 letters long.";
+    }
+    if (noRepeatsRegex.test(formData.name)) {
+      return "Name cannot contain the same letter repeated 4 or more times.";
+    }
+
+    // Email validation
+    if (!formData.email.toLowerCase().endsWith("@gmail.com")) {
+      return "Email must be a @gmail.com address.";
+    }
+    const emailPrefix = formData.email.split("@")[0];
+    if (emailPrefix.length < 3) {
+      return "Email must have at least 3 characters before @gmail.com.";
+    }
+    if (noRepeatsRegex.test(formData.email)) {
+      return "Email cannot contain the same letter repeated 4 or more times.";
+    }
+
+    if (formData.message.trim().length < 10) {
+      return "Feedback message must be at least 10 characters long.";
+    }
+
+    return null; // Valid
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const validationError = validateForm();
+    if (validationError) {
+      setSubmitStatus({ type: 'error', message: validationError });
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    const data = new FormData();
+    data.append("subject", `New Feedback from: ${formData.name}`);
+    
+    // Forminit free tier hides text fields in the email body.
+    // WORKAROUND: We pack all the text data into a .txt file
+    const detailsText = `
+FEEDBACK DETAILS
+-----------------
+Name: ${formData.name}
+Email: ${formData.email}
+
+MESSAGE:
+${formData.message}
+    `.trim();
+
+    const detailsBlob = new Blob([detailsText], { type: 'text/plain' });
+    data.append("fi-file-feedback-details", detailsBlob, "Feedback_Details.txt");
+
+    try {
+      const response = await fetch("https://forminit.com/f/whc3o9o6ak2", {
+        method: "POST",
+        body: data
+      });
+
+      if (response.ok) {
+        setSubmitStatus({ type: 'success', message: 'Feedback sent successfully! Thank you for your input.' });
+        setFormData({ name: '', email: '', message: '' });
+        e.target.reset();
+      } else {
+        console.error("Forminit API Error: Status", response.status);
+        setSubmitStatus({ type: 'error', message: 'Something went wrong. Please try again.' });
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setSubmitStatus({ type: 'error', message: error.message || 'Network error occurred.' });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="page-wrapper">
       <HeroSlider
@@ -205,6 +300,58 @@ const Consultancy = () => {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+      </AnimatedSection>
+
+      {/* Feedback Form */}
+      <AnimatedSection duration={0.3} className="section-padding">
+        <div className="container">
+          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+            <div className="glass-card-dark" style={{ padding: '3rem' }}>
+              <h2 style={{ color: 'var(--color-gold)', marginBottom: '1rem', textAlign: 'center' }}>Share Your Feedback</h2>
+              <p style={{ textAlign: 'center', marginBottom: '2rem', color: '#ccc' }}>We value your input. Please leave your feedback regarding our consultancy services.</p>
+
+              <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+                  <div>
+                    <label style={{ display: 'block', marginBottom: '0.5rem', color: '#fff' }}>Full Name *</label>
+                    <input type="text" name="name" value={formData.name} onChange={handleChange} required placeholder="Enter your full name" style={{ width: '100%', padding: '0.8rem', borderRadius: '5px', border: '1px solid rgba(255,255,255,0.2)', backgroundColor: 'rgba(255,255,255,0.05)', color: '#fff' }} />
+                  </div>
+                  <div>
+                    <label style={{ display: 'block', marginBottom: '0.5rem', color: '#fff' }}>Email Address *</label>
+                    <input type="email" name="email" value={formData.email} onChange={handleChange} required placeholder="Enter your email address" style={{ width: '100%', padding: '0.8rem', borderRadius: '5px', border: '1px solid rgba(255,255,255,0.2)', backgroundColor: 'rgba(255,255,255,0.05)', color: '#fff' }} />
+                  </div>
+                </div>
+
+                <div>
+                  <label style={{ display: 'block', marginBottom: '0.5rem', color: '#fff' }}>Your Feedback *</label>
+                  <textarea name="message" value={formData.message} onChange={handleChange} required rows="5" placeholder="Write your feedback here..." style={{ width: '100%', padding: '0.8rem', borderRadius: '5px', border: '1px solid rgba(255,255,255,0.2)', backgroundColor: 'rgba(255,255,255,0.05)', color: '#fff' }}></textarea>
+                </div>
+
+                <button type="submit" className="btn-primary" disabled={isSubmitting} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', padding: '1rem', opacity: isSubmitting ? 0.7 : 1, cursor: isSubmitting ? 'not-allowed' : 'pointer' }}>
+                  {isSubmitting ? (
+                    <span>Sending...</span>
+                  ) : (
+                    <>
+                      <Send size={20} />
+                      Submit Feedback
+                    </>
+                  )}
+                </button>
+                {submitStatus?.type === 'success' && (
+                  <div style={{ marginTop: '1rem', padding: '1rem', backgroundColor: 'rgba(46, 204, 113, 0.2)', color: '#2ecc71', borderRadius: '5px', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
+                    <CheckCircle size={20} />
+                    {submitStatus.message}
+                  </div>
+                )}
+                {submitStatus?.type === 'error' && (
+                  <div style={{ marginTop: '1rem', padding: '1rem', backgroundColor: 'rgba(231, 76, 60, 0.2)', color: '#e74c3c', borderRadius: '5px', textAlign: 'center' }}>
+                    {submitStatus.message}
+                  </div>
+                )}
+              </form>
+            </div>
           </div>
         </div>
       </AnimatedSection>

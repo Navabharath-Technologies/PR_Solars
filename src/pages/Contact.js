@@ -57,6 +57,7 @@ const Contact = () => {
                 <div>
                   <h3 style={{ fontSize: '1.2rem', marginBottom: '0.2rem' }}>Phone Numbers</h3>
                   <p style={{ color: 'var(--color-text)' }}><a href="tel:+918077585201" style={{ color: 'inherit', textDecoration: 'none' }}>+91 80775 85201</a></p>
+                  <p style={{ color: 'var(--color-text)' }}><a href="tel:+919193025009" style={{ color: 'inherit', textDecoration: 'none' }}>+91 91930 25009</a></p>
                   <p style={{ color: 'var(--color-text)' }}><a href="tel:+918218416906" style={{ color: 'inherit', textDecoration: 'none' }}>+91 8218416906</a></p>
                   <p style={{ color: 'var(--color-text)' }}><a href="tel:+919917223340" style={{ color: 'inherit', textDecoration: 'none' }}>+91 9917223340</a></p>
                 </div>

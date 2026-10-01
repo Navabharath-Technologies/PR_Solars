@@ -52,7 +52,10 @@ const Footer = () => {
             </li>
             <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem', color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.9rem' }}>
               <Phone size={18} color="var(--color-gold)" style={{ flexShrink: 0, marginTop: '3px' }} />
-              <a href="tel:+918077585201" style={{ color: 'inherit', textDecoration: 'none' }}>+91 80775 85201</a>
+              <div>
+                <a href="tel:+918077585201" style={{ color: 'inherit', textDecoration: 'none' }}>+91 80775 85201</a>,{' '}
+                <a href="tel:+919193025009" style={{ color: 'inherit', textDecoration: 'none' }}>+91 91930 25009</a>
+              </div>
             </li>
             <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem', color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.9rem' }}>
               <Mail size={18} color="var(--color-gold)" style={{ flexShrink: 0, marginTop: '3px' }} />
