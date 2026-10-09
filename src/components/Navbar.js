@@ -89,8 +89,8 @@ const Navbar = () => {
               Employee Portal
             </span>
             <div className="dropdown-content">
-              <a href="https://www.prsecs.com/admin" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Employee Login</a>
-              <a href="https://prsecs.com:2096/" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Employee Mail</a>
+              <a href="https://login.prsecs.com/admin" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Employee Login</a>
+              <a href="https://login.prsecs.com:2096/" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Employee Mail</a>
             </div>
           </div>
         </nav>

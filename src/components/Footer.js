@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin } from 'lucide-react';
-import { FaFacebookF, FaXTwitter, FaInstagram, FaYoutube } from 'react-icons/fa6';
+import { FaFacebookF, FaXTwitter, FaInstagram, FaYoutube, FaThreads } from 'react-icons/fa6';
 
 const Footer = () => {
   return (
@@ -19,10 +19,11 @@ const Footer = () => {
             </p>
           </div>
           <div style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem' }}>
-            <a href="https://www.facebook.com/prsecs" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Facebook"><FaFacebookF size={18} /></a>
+            <a href="https://www.facebook.com/profile.php?id=61595025366191" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Facebook"><FaFacebookF size={18} /></a>
             <a href="https://x.com/prsolarenter" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="X (Twitter)"><FaXTwitter size={18} /></a>
-            <a href="#" className="social-icon" aria-label="Instagram"><FaInstagram size={18} /></a>
-            <a href="#" className="social-icon" aria-label="YouTube"><FaYoutube size={18} /></a>
+            <a href="https://www.instagram.com/prsolarenterprise/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Instagram"><FaInstagram size={18} /></a>
+            <a href="https://www.youtube.com/@prsolarenterprise" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="YouTube"><FaYoutube size={18} /></a>
+            <a href="https://www.threads.com/@prsolarenterprise" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Threads"><FaThreads size={18} /></a>
           </div>
         </div>
 
