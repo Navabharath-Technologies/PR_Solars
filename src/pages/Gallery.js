@@ -46,6 +46,7 @@ const Gallery = () => {
     '/images/gallery/zed-7.jpeg',
     '/images/gallery/zed-8.jpeg',
     '/images/gallery/zed-9.jpeg',
+    '/images/gallery/zed-10.jpeg',
     '/images/gallery/chatgpt-1.jpg',
     '/images/gallery/chatgpt-2.jpg',
     '/images/gallery/chatgpt-3.jpg',
