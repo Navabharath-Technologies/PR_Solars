@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Globe, Building, Landmark, CheckCircle2, Send, CheckCircle } from 'lucide-react';
 import zedCertification from '../assets/zed-certification.jpeg';
 import HeroSlider from '../components/HeroSlider';
@@ -14,6 +15,27 @@ const Consultancy = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    const hasFeedbackHash = 
+      location.hash === '#feedback' || 
+      window.location.hash.includes('feedback') ||
+      window.location.search.includes('feedback');
+
+    if (hasFeedbackHash) {
+      const scrollToFeedback = () => {
+        const el = document.getElementById('feedback');
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }
+      };
+
+      // Timeout to ensure DOM and animations are fully rendered
+      const timer = setTimeout(scrollToFeedback, 350);
+      return () => clearTimeout(timer);
+    }
+  }, [location]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -305,56 +327,58 @@ ${formData.message}
       </AnimatedSection>
 
       {/* Feedback Form */}
-      <AnimatedSection duration={0.3} className="section-padding">
-        <div className="container">
-          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-            <div className="glass-card-dark" style={{ padding: '3rem' }}>
-              <h2 style={{ color: 'var(--color-gold)', marginBottom: '1rem', textAlign: 'center' }}>Share Your Feedback</h2>
-              <p style={{ textAlign: 'center', marginBottom: '2rem', color: '#ccc' }}>We value your input. Please leave your feedback regarding our consultancy services.</p>
+      <section id="feedback" style={{ scrollMarginTop: '100px' }}>
+        <AnimatedSection duration={0.3} className="section-padding">
+          <div className="container">
+            <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+              <div className="glass-card-dark" style={{ padding: '3rem' }}>
+                <h2 style={{ color: 'var(--color-gold)', marginBottom: '1rem', textAlign: 'center' }}>Share Your Feedback</h2>
+                <p style={{ textAlign: 'center', marginBottom: '2rem', color: '#ccc' }}>We value your input. Please leave your feedback regarding our consultancy services.</p>
 
-              <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
-                  <div>
-                    <label style={{ display: 'block', marginBottom: '0.5rem', color: '#fff' }}>Full Name *</label>
-                    <input type="text" name="name" value={formData.name} onChange={handleChange} required placeholder="Enter your full name" style={{ width: '100%', padding: '0.8rem', borderRadius: '5px', border: '1px solid rgba(255,255,255,0.2)', backgroundColor: 'rgba(255,255,255,0.05)', color: '#fff' }} />
+                <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+                    <div>
+                      <label style={{ display: 'block', marginBottom: '0.5rem', color: '#fff' }}>Full Name *</label>
+                      <input type="text" name="name" value={formData.name} onChange={handleChange} required placeholder="Enter your full name" style={{ width: '100%', padding: '0.8rem', borderRadius: '5px', border: '1px solid rgba(255,255,255,0.2)', backgroundColor: 'rgba(255,255,255,0.05)', color: '#fff' }} />
+                    </div>
+                    <div>
+                      <label style={{ display: 'block', marginBottom: '0.5rem', color: '#fff' }}>Email Address *</label>
+                      <input type="email" name="email" value={formData.email} onChange={handleChange} required placeholder="Enter your email address" style={{ width: '100%', padding: '0.8rem', borderRadius: '5px', border: '1px solid rgba(255,255,255,0.2)', backgroundColor: 'rgba(255,255,255,0.05)', color: '#fff' }} />
+                    </div>
                   </div>
+
                   <div>
-                    <label style={{ display: 'block', marginBottom: '0.5rem', color: '#fff' }}>Email Address *</label>
-                    <input type="email" name="email" value={formData.email} onChange={handleChange} required placeholder="Enter your email address" style={{ width: '100%', padding: '0.8rem', borderRadius: '5px', border: '1px solid rgba(255,255,255,0.2)', backgroundColor: 'rgba(255,255,255,0.05)', color: '#fff' }} />
+                    <label style={{ display: 'block', marginBottom: '0.5rem', color: '#fff' }}>Your Feedback *</label>
+                    <textarea name="message" value={formData.message} onChange={handleChange} required rows="5" placeholder="Write your feedback here..." style={{ width: '100%', padding: '0.8rem', borderRadius: '5px', border: '1px solid rgba(255,255,255,0.2)', backgroundColor: 'rgba(255,255,255,0.05)', color: '#fff' }}></textarea>
                   </div>
-                </div>
 
-                <div>
-                  <label style={{ display: 'block', marginBottom: '0.5rem', color: '#fff' }}>Your Feedback *</label>
-                  <textarea name="message" value={formData.message} onChange={handleChange} required rows="5" placeholder="Write your feedback here..." style={{ width: '100%', padding: '0.8rem', borderRadius: '5px', border: '1px solid rgba(255,255,255,0.2)', backgroundColor: 'rgba(255,255,255,0.05)', color: '#fff' }}></textarea>
-                </div>
-
-                <button type="submit" className="btn-primary" disabled={isSubmitting} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', padding: '1rem', opacity: isSubmitting ? 0.7 : 1, cursor: isSubmitting ? 'not-allowed' : 'pointer' }}>
-                  {isSubmitting ? (
-                    <span>Sending...</span>
-                  ) : (
-                    <>
-                      <Send size={20} />
-                      Submit Feedback
-                    </>
+                  <button type="submit" className="btn-primary" disabled={isSubmitting} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', padding: '1rem', opacity: isSubmitting ? 0.7 : 1, cursor: isSubmitting ? 'not-allowed' : 'pointer' }}>
+                    {isSubmitting ? (
+                      <span>Sending...</span>
+                    ) : (
+                      <>
+                        <Send size={20} />
+                        Submit Feedback
+                      </>
+                    )}
+                  </button>
+                  {submitStatus?.type === 'success' && (
+                    <div style={{ marginTop: '1rem', padding: '1rem', backgroundColor: 'rgba(46, 204, 113, 0.2)', color: '#2ecc71', borderRadius: '5px', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
+                      <CheckCircle size={20} />
+                      {submitStatus.message}
+                    </div>
                   )}
-                </button>
-                {submitStatus?.type === 'success' && (
-                  <div style={{ marginTop: '1rem', padding: '1rem', backgroundColor: 'rgba(46, 204, 113, 0.2)', color: '#2ecc71', borderRadius: '5px', textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
-                    <CheckCircle size={20} />
-                    {submitStatus.message}
-                  </div>
-                )}
-                {submitStatus?.type === 'error' && (
-                  <div style={{ marginTop: '1rem', padding: '1rem', backgroundColor: 'rgba(231, 76, 60, 0.2)', color: '#e74c3c', borderRadius: '5px', textAlign: 'center' }}>
-                    {submitStatus.message}
-                  </div>
-                )}
-              </form>
+                  {submitStatus?.type === 'error' && (
+                    <div style={{ marginTop: '1rem', padding: '1rem', backgroundColor: 'rgba(231, 76, 60, 0.2)', color: '#e74c3c', borderRadius: '5px', textAlign: 'center' }}>
+                      {submitStatus.message}
+                    </div>
+                  )}
+                </form>
+              </div>
             </div>
           </div>
-        </div>
-      </AnimatedSection>
+        </AnimatedSection>
+      </section>
     </div>
   );
 };
