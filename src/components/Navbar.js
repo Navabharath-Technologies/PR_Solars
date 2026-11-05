@@ -90,7 +90,7 @@ const Navbar = () => {
             </span>
             <div className="dropdown-content">
               <a href="https://login.prsecs.com/admin" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Employee Login</a>
-              <a href="https://login.prsecs.com:2096/" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Employee Mail</a>
+              <a href="https://www.rediffmailpro.com/cgi-bin/login.cgi" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Employee Mail</a>
             </div>
           </div>
         </nav>
